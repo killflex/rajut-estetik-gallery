@@ -3,6 +3,7 @@
 ## Project info
 
 **URL**: https://lovable.dev/projects/a41a927e-d4a5-4727-865a-812b40a7a33a
+**Preview**: https://preview--rajut-estetik-gallery.lovable.app
 
 ## How can I edit this code?
 
