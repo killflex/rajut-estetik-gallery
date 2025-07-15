@@ -1,83 +1,102 @@
-
-import { useState } from 'react';
-import { Send, Mail, Phone, MessageSquare, Instagram, Facebook } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import {
+  Send,
+  Mail,
+  Phone,
+  MessageSquare,
+  Instagram,
+  Facebook,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simple validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
         description: "Mohon lengkapi semua field yang wajib diisi",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
 
     // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
-    
+    console.log("Form submitted:", formData);
+
     toast({
       title: "Pesan Terkirim!",
-      description: "Terima kasih telah menghubungi kami. Kami akan segera merespons pesan Anda.",
+      description:
+        "Terima kasih telah menghubungi kami. Kami akan segera merespons pesan Anda.",
     });
 
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
   };
 
   const contactMethods = [
     {
       icon: Phone,
-      title: 'Telepon/WhatsApp',
-      value: '+62 812-3456-7890',
-      description: 'Hubungi kami langsung untuk konsultasi'
+      title: "Telepon/WhatsApp",
+      value: "+62 831-5056-5521",
+      description: "Hubungi kami langsung untuk konsultasi",
     },
     {
       icon: Mail,
-      title: 'Email',
-      value: 'info@rajutestetik.com',
-      description: 'Kirim email untuk pertanyaan detail'
+      title: "Email",
+      value: "info@rajutestetik.com",
+      description: "Kirim email untuk pertanyaan detail",
     },
     {
       icon: MessageSquare,
-      title: 'Live Chat',
-      value: 'Chat Sekarang',
-      description: 'Respon cepat untuk pertanyaan umum'
-    }
+      title: "Live Chat",
+      value: "Chat Sekarang",
+      description: "Respon cepat untuk pertanyaan umum",
+    },
   ];
 
   const socialMedia = [
-    { icon: Instagram, name: 'Instagram', handle: '@rajutestetik', url: '#' },
-    { icon: Facebook, name: 'Facebook', handle: 'Rajut Estetik', url: '#' }
+    {
+      icon: Instagram,
+      name: "Instagram",
+      handle: "@shanandabiz.official",
+      url: "https://www.instagram.com/shanandabiz.official",
+    },
+    {
+      icon: Facebook,
+      name: "Facebook",
+      handle: "Karya Rajut",
+      url: "https://www.facebook.com/people/Karya-Rajut/100063545816857",
+    },
   ];
 
   return (
@@ -89,7 +108,8 @@ const ContactForm = () => {
             Hubungi Kami
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ada pertanyaan atau ingin memesan produk custom? Jangan ragu untuk menghubungi kami
+            Ada pertanyaan atau ingin memesan produk custom? Jangan ragu untuk
+            menghubungi kami
           </p>
         </div>
 
@@ -103,7 +123,10 @@ const ContactForm = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Nama Lengkap *
                     </label>
                     <Input
@@ -117,7 +140,10 @@ const ContactForm = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Email *
                     </label>
                     <Input
@@ -133,7 +159,10 @@ const ContactForm = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Subjek
                   </label>
                   <Input
@@ -147,7 +176,10 @@ const ContactForm = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Pesan *
                   </label>
                   <Textarea
@@ -174,7 +206,10 @@ const ContactForm = () => {
             {/* Contact Methods */}
             <div className="space-y-4">
               {contactMethods.map((method, index) => (
-                <Card key={index} className="border-border card-hover cursor-pointer">
+                <Card
+                  key={index}
+                  className="border-border card-hover cursor-pointer"
+                >
                   <CardContent className="p-4">
                     <div className="flex items-center gap-4">
                       <div className="flex-shrink-0">
@@ -183,9 +218,15 @@ const ContactForm = () => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">{method.title}</h3>
-                        <p className="font-medium text-primary">{method.value}</p>
-                        <p className="text-sm text-muted-foreground">{method.description}</p>
+                        <h3 className="font-semibold text-foreground">
+                          {method.title}
+                        </h3>
+                        <p className="font-medium text-primary">
+                          {method.value}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {method.description}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -208,8 +249,12 @@ const ContactForm = () => {
                     >
                       <social.icon className="h-5 w-5 text-primary" />
                       <div>
-                        <div className="font-medium text-foreground">{social.name}</div>
-                        <div className="text-sm text-muted-foreground">{social.handle}</div>
+                        <div className="font-medium text-foreground">
+                          {social.name}
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          {social.handle}
+                        </div>
                       </div>
                     </a>
                   ))}
@@ -219,13 +264,25 @@ const ContactForm = () => {
 
             {/* FAQ Section */}
             <div className="bg-primary/5 p-6 rounded-lg border border-primary/20">
-              <h3 className="font-semibold text-foreground mb-3">Pertanyaan Umum</h3>
+              <h3 className="font-semibold text-foreground mb-3">
+                Pertanyaan Umum
+              </h3>
               <div className="space-y-2 text-sm">
-                <p><strong>Q:</strong> Apakah menerima pesanan custom?</p>
-                <p className="text-muted-foreground mb-3"><strong>A:</strong> Ya, kami menerima pesanan custom dengan design sesuai keinginan Anda.</p>
-                
-                <p><strong>Q:</strong> Berapa lama waktu pengerjaan?</p>
-                <p className="text-muted-foreground"><strong>A:</strong> Untuk produk ready stock 1-2 hari, custom order 7-14 hari kerja.</p>
+                <p>
+                  <strong>Q:</strong> Apakah menerima pesanan custom?
+                </p>
+                <p className="text-muted-foreground mb-3">
+                  <strong>A:</strong> Ya, kami menerima pesanan custom dengan
+                  design sesuai keinginan Anda.
+                </p>
+
+                <p>
+                  <strong>Q:</strong> Berapa lama waktu pengerjaan?
+                </p>
+                <p className="text-muted-foreground">
+                  <strong>A:</strong> Untuk produk ready stock 1-2 hari, custom
+                  order 7-14 hari kerja.
+                </p>
               </div>
             </div>
           </div>
