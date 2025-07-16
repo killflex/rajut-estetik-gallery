@@ -10,7 +10,7 @@ const LocationMap = () => {
   const [mapError, setMapError] = useState<string | null>(null);
 
   const businessInfo = {
-    name: "Rajut Estetik",
+    name: "Shanandabiz Official",
     address: "Jl. Jetis Kulon X/44A, Surabaya, Jawa Timur 60243",
     phone: "+62 831-5056-5521",
     telphone: "+62-831-5056-5521",
@@ -52,7 +52,7 @@ const LocationMap = () => {
           const map = new Map(mapRef.current, {
             center: businessInfo.coordinates,
             zoom: 18, // High zoom for specific location view
-            mapId: "rajut_estetik_map",
+            mapId: "shanandabiz_official_map",
             mapTypeId: "roadmap",
             disableDefaultUI: false,
             zoomControl: true,
@@ -162,6 +162,22 @@ const LocationMap = () => {
               <Navigation className="h-4 w-4 mr-2" />
               Buka di Maps
             </Button>
+
+            {/* Additional Info */}
+            {/* <div className="bg-muted/50 p-6 rounded-lg">
+              <h3 className="font-semibold text-foreground mb-3">
+                Catatan Penting:
+              </h3>
+              <ul className="text-sm text-muted-foreground space-y-2">
+                <li>
+                  • Disarankan untuk menelepon terlebih dahulu sebelum
+                  berkunjung
+                </li>
+                <li>• Tersedia layanan konsultasi desain custom</li>
+                <li>• Parkir tersedia di depan toko</li>
+                <li>• Pembayaran tunai dan transfer bank</li>
+              </ul>
+            </div> */}
           </div>
 
           {/* Business Info */}
@@ -205,6 +221,12 @@ const LocationMap = () => {
                     variant="outline"
                     size="sm"
                     className="bg-green-50 hover:bg-green-100 text-green-700 border-green-200"
+                    onClick={() =>
+                      window.open(
+                        `https://api.whatsapp.com/send/?phone=6283150565521&text=Halo%2C%20Shanandabiz%20Official.%20Saya%20tertarik%20dengan%20produk%20rajut%20Anda.%20Bisa%20bantu%20saya%20dengan%20informasi%20mengenai%3A%0A1.%20Tas%20Rajut%0A2.%20Pakaian%20Rajut%0A3.%20Aksesori%20Rajut%0A%0ATerima%20kasih.&type=phone_number&app_absent=0}`,
+                        "_blank"
+                      )
+                    }
                   >
                     WhatsApp
                   </Button>
@@ -235,22 +257,6 @@ const LocationMap = () => {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Additional Info */}
-            <div className="bg-muted/50 p-6 rounded-lg">
-              <h3 className="font-semibold text-foreground mb-3">
-                Catatan Penting:
-              </h3>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>
-                  • Disarankan untuk menelepon terlebih dahulu sebelum
-                  berkunjung
-                </li>
-                <li>• Tersedia layanan konsultasi desain custom</li>
-                <li>• Parkir tersedia di depan toko</li>
-                <li>• Pembayaran tunai dan transfer bank</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

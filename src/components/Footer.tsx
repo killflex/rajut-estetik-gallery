@@ -1,4 +1,12 @@
-import { Heart, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Heart,
+  Instagram,
+  Facebook,
+  ShoppingBag,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,6 +43,11 @@ const Footer = () => {
       href: "https://www.facebook.com/people/Karya-Rajut/100063545816857",
       label: "Facebook",
     },
+    {
+      icon: ShoppingBag,
+      href: "https://www.lazada.co.id/shop/owsl1g69/?spm=a2o4j.pdp_revamp.seller.1.17ea7617ZAt6QX&itemId=8348612848&channelSource=pdp",
+      label: "Lazada",
+    },
     { icon: Mail, href: "mailto:info@rajutestetik.com", label: "Email" },
   ];
 
@@ -46,7 +59,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold font-serif mb-4">
-              Rajut Estetik
+              Shanandabiz Official
             </h3>
             <p className="text-background/80 mb-6 leading-relaxed">
               Menghadirkan kerajinan rajut berkualitas tinggi dengan desain
@@ -149,7 +162,15 @@ const Footer = () => {
             <div className="flex items-center gap-1 text-background/80 text-sm">
               <span>Made with</span>
               <Heart className="h-4 w-4 text-red-400 fill-current" />
-              <span>for UMKM Wonokromo</span>
+              <span>by</span>
+              <a
+                href="https://killflex.vercel.app"
+                className="text-background hover:text-background/80 transition-colors duration-200 font-medium underline underline-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ferry Hasan
+              </a>
             </div>
           </div>
         </div>

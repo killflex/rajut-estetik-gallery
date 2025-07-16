@@ -1,29 +1,32 @@
-
-import { Heart, Award, Users, Clock } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Heart, Award, Users, Clock } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const AboutUs = () => {
   const features = [
     {
       icon: Heart,
-      title: 'Dibuat dengan Cinta',
-      description: 'Setiap produk dibuat dengan penuh perhatian dan cinta untuk memberikan kualitas terbaik'
+      title: "Dibuat dengan Cinta",
+      description:
+        "Setiap produk dibuat dengan penuh perhatian dan cinta untuk memberikan kualitas terbaik",
     },
     {
       icon: Award,
-      title: 'Kualitas Premium',
-      description: 'Menggunakan benang berkualitas tinggi dan teknik rajut tradisional yang telah teruji'
+      title: "Kualitas Premium",
+      description:
+        "Menggunakan benang berkualitas tinggi dan teknik rajut tradisional yang telah teruji",
     },
     {
       icon: Users,
-      title: 'Mendukung UMKM',
-      description: 'Dengan membeli produk kami, Anda turut mendukung ekonomi kreatif lokal'
+      title: "Mendukung UMKM",
+      description:
+        "Dengan membeli produk kami, Anda turut mendukung ekonomi kreatif lokal",
     },
     {
       icon: Clock,
-      title: 'Pengalaman Bertahun-tahun',
-      description: 'Lebih dari 5 tahun pengalaman dalam menciptakan kerajinan rajut berkualitas'
-    }
+      title: "Pengalaman Bertahun-tahun",
+      description:
+        "Lebih dari 5 tahun pengalaman dalam menciptakan kerajinan rajut berkualitas",
+    },
   ];
 
   return (
@@ -33,23 +36,26 @@ const AboutUs = () => {
           {/* Content */}
           <div>
             <h2 className="text-4xl font-bold text-foreground mb-6 font-serif">
-              Tentang Rajut Estetik
+              Tentang Shanandabiz
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Rajut Estetik adalah UMKM yang bergerak di bidang kerajinan rajut berkualitas tinggi. 
-                Dimulai dari hobi sederhana pada tahun 2019, kami telah berkembang menjadi brand 
-                terpercaya yang menghadirkan produk-produk rajut modern dan elegan.
+                Shanandabiz adalah UMKM yang bergerak di bidang kerajinan rajut
+                berkualitas tinggi. Dimulai dari hobi sederhana pada tahun 2019,
+                kami telah berkembang menjadi brand terpercaya yang menghadirkan
+                produk-produk rajut modern dan elegan.
               </p>
               <p>
-                Setiap produk kami dibuat dengan tangan terampil dan penuh dedikasi. Kami percaya 
-                bahwa kerajinan tangan memiliki nilai lebih karena mengandung cerita, cinta, dan 
-                keunikan yang tidak bisa digantikan oleh produksi massal.
+                Setiap produk kami dibuat dengan tangan terampil dan penuh
+                dedikasi. Kami percaya bahwa kerajinan tangan memiliki nilai
+                lebih karena mengandung cerita, cinta, dan keunikan yang tidak
+                bisa digantikan oleh produksi massal.
               </p>
               <p>
-                Dengan memadukan teknik rajut tradisional dan desain kontemporer, kami menciptakan 
-                produk-produk yang tidak hanya indah dipandang, tetapi juga nyaman digunakan dalam 
-                aktivitas sehari-hari.
+                Dengan memadukan teknik rajut tradisional dan desain
+                kontemporer, kami menciptakan produk-produk yang tidak hanya
+                indah dipandang, tetapi juga nyaman digunakan dalam aktivitas
+                sehari-hari.
               </p>
             </div>
 
@@ -57,11 +63,15 @@ const AboutUs = () => {
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="text-center p-4 bg-muted/50 rounded-lg">
                 <div className="text-2xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Produk Terjual</div>
+                <div className="text-sm text-muted-foreground">
+                  Produk Terjual
+                </div>
               </div>
               <div className="text-center p-4 bg-muted/50 rounded-lg">
                 <div className="text-2xl font-bold text-primary">200+</div>
-                <div className="text-sm text-muted-foreground">Pelanggan Puas</div>
+                <div className="text-sm text-muted-foreground">
+                  Pelanggan Puas
+                </div>
               </div>
             </div>
           </div>
@@ -70,7 +80,7 @@ const AboutUs = () => {
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=600&q=80"
-              alt="Tim Rajut Estetik"
+              alt="Tim Shanandabiz"
               className="w-full h-96 object-cover rounded-lg shadow-xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg">

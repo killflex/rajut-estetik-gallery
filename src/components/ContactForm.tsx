@@ -6,6 +6,7 @@ import {
   MessageSquare,
   Instagram,
   Facebook,
+  ShoppingBag,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -65,22 +66,10 @@ const ContactForm = () => {
 
   const contactMethods = [
     {
-      icon: Phone,
-      title: "Telepon/WhatsApp",
-      value: "+62 831-5056-5521",
-      description: "Hubungi kami langsung untuk konsultasi",
-    },
-    {
       icon: Mail,
       title: "Email",
       value: "info@rajutestetik.com",
       description: "Kirim email untuk pertanyaan detail",
-    },
-    {
-      icon: MessageSquare,
-      title: "Live Chat",
-      value: "Chat Sekarang",
-      description: "Respon cepat untuk pertanyaan umum",
     },
   ];
 
@@ -96,6 +85,12 @@ const ContactForm = () => {
       name: "Facebook",
       handle: "Karya Rajut",
       url: "https://www.facebook.com/people/Karya-Rajut/100063545816857",
+    },
+    {
+      icon: ShoppingBag,
+      name: "Lazada",
+      handle: "Shanandabiz Official Store",
+      url: "https://www.lazada.co.id/shop/owsl1g69/?spm=a2o4j.pdp_revamp.seller.1.17ea7617ZAt6QX&itemId=8348612848&channelSource=pdp",
     },
   ];
 
