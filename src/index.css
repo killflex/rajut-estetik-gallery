@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,7 +18,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 8 8% 18%;
 
-    --primary: 14 68% 42%;
+    --primary: 36 39% 54%;
     --primary-foreground: 42 54% 98%;
 
     --secondary: 100 20% 95%;
@@ -28,7 +27,7 @@ All colors MUST be HSL.
     --muted: 36 32% 88%;
     --muted-foreground: 20 20% 50%;
 
-    --accent: 75 15% 42%;
+    --accent: 36 39% 54%;
     --accent-foreground: 42 54% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,18 +35,18 @@ All colors MUST be HSL.
 
     --border: 30 29% 78%;
     --input: 30 29% 78%;
-    --ring: 14 68% 42%;
+    --ring: 36 39% 54%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 42 54% 98%;
     --sidebar-foreground: 8 8% 18%;
-    --sidebar-primary: 14 68% 42%;
+    --sidebar-primary: 36 39% 54%;
     --sidebar-primary-foreground: 42 54% 98%;
     --sidebar-accent: 36 32% 88%;
     --sidebar-accent-foreground: 8 8% 18%;
     --sidebar-border: 30 29% 78%;
-    --sidebar-ring: 14 68% 42%;
+    --sidebar-ring: 36 39% 54%;
   }
 
   .dark {
@@ -60,7 +59,7 @@ All colors MUST be HSL.
     --popover: 12 12% 25%;
     --popover-foreground: 42 54% 95%;
 
-    --primary: 14 68% 52%;
+    --primary: 36 39% 64%;
     --primary-foreground: 8 8% 18%;
 
     --secondary: 16 15% 35%;
@@ -69,7 +68,7 @@ All colors MUST be HSL.
     --muted: 16 15% 35%;
     --muted-foreground: 25 26% 65%;
 
-    --accent: 75 15% 52%;
+    --accent: 36 39% 64%;
     --accent-foreground: 8 8% 18%;
 
     --destructive: 0 62.8% 30.6%;
@@ -77,16 +76,16 @@ All colors MUST be HSL.
 
     --border: 16 15% 35%;
     --input: 16 15% 35%;
-    --ring: 14 68% 52%;
+    --ring: 36 39% 64%;
 
     --sidebar-background: 8 8% 18%;
     --sidebar-foreground: 42 54% 95%;
-    --sidebar-primary: 14 68% 52%;
+    --sidebar-primary: 36 39% 64%;
     --sidebar-primary-foreground: 8 8% 18%;
     --sidebar-accent: 16 15% 35%;
     --sidebar-accent-foreground: 42 54% 95%;
     --sidebar-border: 16 15% 35%;
-    --sidebar-ring: 14 68% 52%;
+    --sidebar-ring: 36 39% 64%;
   }
 }
 
@@ -99,7 +98,12 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
@@ -108,15 +112,15 @@ All colors MUST be HSL.
   .btn-primary {
     @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-all duration-300 hover:shadow-lg hover:scale-105;
   }
-  
+
   .btn-secondary {
     @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-md font-medium transition-all duration-300 hover:shadow-md;
   }
-  
+
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
-  
+
   .section-padding {
     @apply py-16 px-4 sm:px-6 lg:px-8;
   }

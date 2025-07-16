@@ -80,10 +80,16 @@ const HeroSection = () => {
         <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto animate-slide-up">
           {slides[currentSlide].subtitle}
         </p>
-        <Button className="btn-primary text-lg px-8 py-4 animate-slide-up">
-          {slides[currentSlide].cta}
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <a
+          href={slides[currentSlide].link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="btn-primary text-lg px-8 py-4 animate-slide-up">
+            {slides[currentSlide].cta}
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </a>
       </div>
 
       {/* Navigation Arrows */}

@@ -1,7 +1,6 @@
-
-import { useState } from 'react';
-import { X, ZoomIn } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { X, ZoomIn } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -9,52 +8,52 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80',
-      alt: 'Tas rajut vintage dengan detail indah',
-      category: 'Tas'
+      src: "product/1.webp",
+      alt: "Tas rajut vintage dengan detail indah",
+      category: "Tas",
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=600&q=80',
-      alt: 'Koleksi dompet rajut warna-warni',
-      category: 'Dompet'
+      src: "product/2.webp",
+      alt: "Koleksi dompet rajut warna-warni",
+      category: "Dompet",
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80',
-      alt: 'Sandal rajut casual untuk sehari-hari',
-      category: 'Sandal'
+      src: "product/3.webp",
+      alt: "Sandal rajut casual untuk sehari-hari",
+      category: "Sandal",
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?auto=format&fit=crop&w=600&q=80',
-      alt: 'Aksesori rajut unik dan menarik',
-      category: 'Aksesori'
+      src: "product/4.webp",
+      alt: "Aksesori rajut unik dan menarik",
+      category: "Aksesori",
     },
     {
       id: 5,
-      src: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=600&q=80',
-      alt: 'Suasana workshop pembuatan rajut',
-      category: 'Proses'
+      src: "product/5.webp",
+      alt: "Suasana workshop pembuatan rajut",
+      category: "Proses",
     },
     {
       id: 6,
-      src: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80',
-      alt: 'Detail rajutan tangan berkualitas',
-      category: 'Detail'
+      src: "product/6.webp",
+      alt: "Detail rajutan tangan berkualitas",
+      category: "Detail",
     },
     {
       id: 7,
-      src: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=400&q=80',
-      alt: 'Kombinasi warna benang natural',
-      category: 'Material'
+      src: "product/7.webp",
+      alt: "Kombinasi warna benang natural",
+      category: "Material",
     },
     {
       id: 8,
-      src: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=400&q=80',
-      alt: 'Produk rajut dalam kehidupan sehari-hari',
-      category: 'Lifestyle'
-    }
+      src: "product/8.webp",
+      alt: "Produk rajut dalam kehidupan sehari-hari",
+      category: "Lifestyle",
+    },
   ];
 
   return (
@@ -66,7 +65,8 @@ const Gallery = () => {
             Galeri Karya Kami
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Lihat koleksi foto produk rajut kami dalam berbagai setting dan gaya hidup
+            Lihat koleksi foto produk rajut kami dalam berbagai setting dan gaya
+            hidup
           </p>
         </div>
 
@@ -87,7 +87,9 @@ const Gallery = () => {
                 <ZoomIn className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-sm font-medium">{image.category}</p>
+                <p className="text-white text-sm font-medium">
+                  {image.category}
+                </p>
               </div>
             </div>
           ))}
@@ -108,7 +110,7 @@ const Gallery = () => {
               <img
                 src={selectedImage}
                 alt="Enlarged view"
-                className="max-w-full max-h-full object-contain rounded-lg"
+                className="max-w-[700px] max-h-[700px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -116,9 +118,15 @@ const Gallery = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <Button className="btn-primary">
-            Lihat Lebih Banyak di Instagram
-          </Button>
+          <a
+            href="https://www.instagram.com/shanandabiz.official"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="btn-primary">
+              Lihat Lebih Banyak di Instagram
+            </Button>
+          </a>
         </div>
       </div>
     </section>

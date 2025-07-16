@@ -24,7 +24,11 @@ const Header = () => {
             {/* <h1 className="text-2xl font-bold text-primary font-serif">
               Rajut Estetik
             </h1> */}
-            <a href="https://shanandabizofficial.vercel.app">
+            <a
+              href="https://shanandabizofficial.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://res.cloudinary.com/dn2tic45s/image/upload/v1752692575/logoss_no_margin_cemkmr.png"
                 alt="Shanandabiz Official Logo"

@@ -108,9 +108,9 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-4 gap-12">
           {/* Contact Form */}
-          <Card className="border-border">
+          {/* <Card className="border-border">
             <CardHeader>
               <CardTitle>Kirim Pesan</CardTitle>
             </CardHeader>
@@ -194,10 +194,10 @@ const ContactForm = () => {
                 </Button>
               </form>
             </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className="space-y-6 col-span-2 lg:col-start-2">
             {/* Contact Methods */}
             <div className="space-y-4">
               {contactMethods.map((method, index) => (

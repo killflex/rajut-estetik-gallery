@@ -22,28 +22,25 @@ const ProductCatalog = () => {
       name: "Tas Rajut Vintage",
       category: "tas",
       price: "Rp 125.000",
-      image:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80",
+      image: "product/1.webp",
       badge: "Terlaris",
-      colors: ["Coklat", "Hitam", "Cream"],
+      colors: ["Hijau"],
     },
     {
       id: 2,
       name: "Dompet Rajut Mini",
       category: "dompet",
       price: "Rp 45.000",
-      image:
-        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=400&q=80",
+      image: "product/2.webp",
       badge: "Baru",
-      colors: ["Merah", "Biru", "Hijau"],
+      colors: ["Cream"],
     },
     {
       id: 3,
       name: "Sandal Rajut Casual",
       category: "sandal",
       price: "Rp 75.000",
-      image:
-        "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=400&q=80",
+      image: "product/3.webp",
       badge: "",
       colors: ["Abu-abu", "Putih", "Navy"],
     },
@@ -52,8 +49,7 @@ const ProductCatalog = () => {
       name: "Bros Rajut Bunga",
       category: "aksesori",
       price: "Rp 25.000",
-      image:
-        "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?auto=format&fit=crop&w=400&q=80",
+      image: "product/4.webp",
       badge: "Limited",
       colors: ["Pink", "Kuning", "Ungu"],
     },
@@ -62,8 +58,7 @@ const ProductCatalog = () => {
       name: "Tas Rajut Bohemian",
       category: "tas",
       price: "Rp 150.000",
-      image:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=400&q=80",
+      image: "product/5.webp",
       badge: "Premium",
       colors: ["Coklat Tua", "Tan", "Burgundy"],
     },
@@ -72,8 +67,25 @@ const ProductCatalog = () => {
       name: "Dompet Rajut Panjang",
       category: "dompet",
       price: "Rp 65.000",
-      image:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80",
+      image: "product/6.webp",
+      badge: "",
+      colors: ["Hitam", "Coklat", "Maroon"],
+    },
+    {
+      id: 6,
+      name: "Dompet Rajut Panjang",
+      category: "dompet",
+      price: "Rp 65.000",
+      image: "product/7.webp",
+      badge: "",
+      colors: ["Hitam", "Coklat", "Maroon"],
+    },
+    {
+      id: 6,
+      name: "Dompet Rajut Panjang",
+      category: "dompet",
+      price: "Rp 65.000",
+      image: "product/8.webp",
       badge: "",
       colors: ["Hitam", "Coklat", "Maroon"],
     },
@@ -115,21 +127,6 @@ const ProductCatalog = () => {
               </Button>
             ))}
           </div>
-
-          {/* Sort */}
-          {/* <div className="flex items-center gap-2">
-            <Filter className="h-4 w-4 text-muted-foreground" />
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="bg-background border border-border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-            >
-              <option value="terbaru">Terbaru</option>
-              <option value="terlaris">Terlaris</option>
-              <option value="harga-rendah">Harga Terendah</option>
-              <option value="harga-tinggi">Harga Tertinggi</option>
-            </select>
-          </div> */}
         </div>
 
         {/* Product Grid */}
@@ -152,46 +149,12 @@ const ProductCatalog = () => {
                     {product.badge}
                   </Badge>
                 )}
-
-                {/* Action Buttons */}
-                <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button
-                    size="icon"
-                    variant="secondary"
-                    className="h-8 w-8 bg-white/90 hover:bg-white"
-                  >
-                    <Heart className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    size="icon"
-                    variant="secondary"
-                    className="h-8 w-8 bg-white/90 hover:bg-white"
-                  >
-                    <Eye className="h-4 w-4" />
-                  </Button>
-                </div>
               </div>
 
               <CardContent className="p-4">
                 <h3 className="font-semibold text-foreground mb-2 line-clamp-2">
                   {product.name}
                 </h3>
-
-                {/* Colors */}
-                <div className="flex gap-1 mb-3">
-                  {product.colors.slice(0, 3).map((color, index) => (
-                    <div
-                      key={index}
-                      className="w-4 h-4 rounded-full border border-border bg-gradient-to-br from-gray-300 to-gray-500"
-                      title={color}
-                    />
-                  ))}
-                  {product.colors.length > 3 && (
-                    <span className="text-xs text-muted-foreground ml-1">
-                      +{product.colors.length - 3}
-                    </span>
-                  )}
-                </div>
 
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-bold text-primary">
@@ -204,13 +167,6 @@ const ProductCatalog = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Load More Button */}
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="px-8">
-            Muat Lebih Banyak Produk
-          </Button>
         </div>
       </div>
     </section>

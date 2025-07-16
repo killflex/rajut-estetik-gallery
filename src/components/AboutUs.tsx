@@ -79,7 +79,7 @@ const AboutUs = () => {
           {/* Image */}
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=600&q=80"
+              src="https://res.cloudinary.com/dn2tic45s/image/upload/v1752694846/pexels-surene-palvie-1075224-2062061_eaansu.jpg"
               alt="Tim Shanandabiz"
               className="w-full h-96 object-cover rounded-lg shadow-xl"
             />
