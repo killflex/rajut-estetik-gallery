@@ -1,30 +1,39 @@
-
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { link } from "fs";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=1920&q=80',
-      title: 'Kerajinan Rajut Berkualitas Tinggi',
-      subtitle: 'Hadirkan koleksi terbaru tas, dompet, dan aksesori rajut dengan sentuhan modern yang memukau',
-      cta: 'Lihat Koleksi Terbaru'
+      image:
+        "https://res.cloudinary.com/dn2tic45s/image/upload/v1752692836/pexels-viddaam-65451_vnkr3e.jpg",
+      title: "Kerajinan Rajut Berkualitas Tinggi",
+      subtitle:
+        "Hadirkan koleksi terbaru tas, dompet, dan aksesori rajut dengan sentuhan modern yang memukau",
+      cta: "Lihat Koleksi Terbaru",
+      link: "#galeri",
     },
     {
-      image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1920&q=80',
-      title: 'Desain Elegan untuk Gaya Hidup Modern',
-      subtitle: 'Setiap produk dibuat dengan detail sempurna dan benang berkualitas premium',
-      cta: 'Belanja Sekarang'
+      image:
+        "https://res.cloudinary.com/dn2tic45s/image/upload/v1752692635/pexels-arina-krasnikova-5709866_cs2eks.jpg",
+      title: "Desain Elegan untuk Gaya Hidup Modern",
+      subtitle:
+        "Setiap produk dibuat dengan detail sempurna dan benang berkualitas premium",
+      cta: "Belanja Sekarang",
+      link: "https://www.lazada.co.id/shop/owsl1g69/?spm=a2o4j.pdp_revamp.seller.1.17ea7617ZAt6QX&itemId=8348612848&channelSource=pdp",
     },
     {
-      image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=1920&q=80',
-      title: 'Karya Tangan Penuh Cinta',
-      subtitle: 'Dukung UMKM lokal dengan memilih produk rajut handmade yang unik dan berkualitas',
-      cta: 'Temukan Produk Unik'
-    }
+      image:
+        "https://res.cloudinary.com/dn2tic45s/image/upload/v1752692836/pexels-miriam-alonso-7585858_daodxg.jpg",
+      title: "Karya Tangan Penuh Cinta",
+      subtitle:
+        "Dukung UMKM lokal dengan memilih produk rajut handmade yang unik dan berkualitas",
+      cta: "Temukan Produk Unik",
+      link: "#produk",
+    },
   ];
 
   useEffect(() => {
@@ -43,13 +52,16 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="beranda" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="beranda"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Images */}
       {slides.map((slide, index) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+            index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
           <div
@@ -95,7 +107,7 @@ const HeroSection = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
+              index === currentSlide ? "bg-white" : "bg-white/50"
             }`}
           />
         ))}

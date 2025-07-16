@@ -1,19 +1,18 @@
-
-import { useState } from 'react';
-import { Menu, X, ShoppingBag, Heart, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { Menu, X, ShoppingBag, Heart, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Beranda', href: '#beranda' },
-    { name: 'Produk', href: '#produk' },
-    { name: 'Galeri', href: '#galeri' },
-    { name: 'Tentang Kami', href: '#tentang' },
-    { name: 'Testimoni', href: '#testimoni' },
-    { name: 'Lokasi', href: '#lokasi' },
-    { name: 'Kontak', href: '#kontak' },
+    { name: "Beranda", href: "#beranda" },
+    { name: "Produk", href: "#produk" },
+    { name: "Galeri", href: "#galeri" },
+    { name: "Tentang Kami", href: "#tentang" },
+    { name: "Testimoni", href: "#testimoni" },
+    { name: "Lokasi", href: "#lokasi" },
+    { name: "Kontak", href: "#kontak" },
   ];
 
   return (
@@ -22,9 +21,16 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-primary font-serif">
+            {/* <h1 className="text-2xl font-bold text-primary font-serif">
               Rajut Estetik
-            </h1>
+            </h1> */}
+            <a href="https://shanandabizofficial.vercel.app">
+              <img
+                src="https://res.cloudinary.com/dn2tic45s/image/upload/v1752692575/logoss_no_margin_cemkmr.png"
+                alt="Shanandabiz Official Logo"
+                className="w-full h-8 object-cover"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -40,19 +46,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Action buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="hover:bg-muted">
-              <Heart className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-muted">
-              <ShoppingBag className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-muted">
-              <User className="h-5 w-5" />
-            </Button>
-          </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <Button
@@ -61,7 +54,11 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="hover:bg-muted"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -81,17 +78,6 @@ const Header = () => {
                 </a>
               ))}
             </nav>
-            <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-border">
-              <Button variant="ghost" size="icon" className="hover:bg-muted">
-                <Heart className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-muted">
-                <ShoppingBag className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-muted">
-                <User className="h-5 w-5" />
-              </Button>
-            </div>
           </div>
         )}
       </div>
